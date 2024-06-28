@@ -18,19 +18,22 @@ export const ProductIndex = () => {
           Create New
         </ButtonLink>
       </div>
+      <hr className="h-px my-8 bg-gray-400 border-0" />
       <h2 className="text-4xl font-extrabold text-center">Products</h2>
-      <div className="grid-rows-1">
+      <ul className="grid-rows-1">
         {data?.map((d) => (
-          <ProductCard
-            className="m-1 flex align-center"
-            key={d.id}
-            id={d.id}
-            name={d.name}
-            description={d.description}
-            quantity={d.quantity}
-          />
+          <li key={d.id}>
+            <ProductCard
+              className="m-1 flex align-center"
+              key={d.id}
+              id={d.id}
+              name={d.name}
+              description={d.description}
+              quantity={d.quantity}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
