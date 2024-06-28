@@ -20,7 +20,7 @@ export const productsApi = createApi({
       query: (data) => ({
         url: `products/`,
         method: "POST",
-        body: data,
+        body: { ...data, quantity: 1 },
       }),
       invalidatesTags: ["Product"],
     }),
