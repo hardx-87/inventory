@@ -118,6 +118,7 @@ export const ProductDetails = () => {
           onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
             setProduct({ ...product, quantity: parseInt(e.target.value) })
           }
+          required
         />
       </div>
       <div className="flex items-center justify-between">
